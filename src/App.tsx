@@ -9,6 +9,7 @@ import "@ethersproject/shims" // before ethers! see https://docs.ethers.io/v5/co
 import { ethers } from 'ethers';
 import { FormatTypes } from '@ethersproject/abi';
 
+import { Wallet } from './features/wallet/Wallet';
 
 const contract1Abi = [
   {
@@ -437,6 +438,7 @@ function App() {
           <Link to="/oems">OEMs</Link> | {" "}
           <Link to="/products">Products</Link>
         </nav>
+        <Wallet />
       </header>
     </div>
   );

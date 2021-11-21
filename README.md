@@ -9,6 +9,10 @@ yarn add @ethersproject/shims
 
 # react router
 yarn add react-router-dom history
+
+# redux
+yarn add @reduxjs/toolkit
+yarn add react-redux
 ```
 ## Available Scripts
 
