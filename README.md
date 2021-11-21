@@ -5,6 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 npx create-react-app genuines --template typescript
 cd genuines
 yarn add ethers
+yarn add @ethersproject/shims
 ```
 ## Available Scripts
 
