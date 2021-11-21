@@ -13,6 +13,12 @@ yarn add react-router-dom history
 # redux
 yarn add @reduxjs/toolkit
 yarn add react-redux
+
+# material-ui
+yarn add @mui/material @emotion/react @emotion/styled
+yarn add @fontsource/roboto
+yarn add @mui/icons-material
+
 ```
 ## Available Scripts
 

@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import logo from './logo.svg';
 import './App.css';
+import AppBar from './app/AppBar';
 import RequireAuth from './features/requireAuth/RequireAuth';
 import OEMs from "./routes/oems";
 
@@ -417,10 +418,12 @@ function App() {
     }
   }, [contract1]);
 
+
   return (
     <BrowserRouter>
     <div className="App">
       <header className="App-header">
+          <AppBar />
         {false && <img src={logo} className="App-logo" alt="logo" />}
         <p>
           Got {provider ? ' a provider' : 'no provider yet!'}.
