@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 import logo from './logo.svg';
 import './App.css';
+import RequireAuth from './features/requireAuth/RequireAuth';
+import OEMs from "./routes/oems";
+
 
 // todo install import "react-native-get-random-values" ?
 import "@ethersproject/shims" // before ethers! see https://docs.ethers.io/v5/cookbook/react-native/
@@ -413,6 +418,7 @@ function App() {
   }, [contract1]);
 
   return (
+    <BrowserRouter>
     <div className="App">
       <header className="App-header">
         {false && <img src={logo} className="App-logo" alt="logo" />}
@@ -439,8 +445,26 @@ function App() {
           <Link to="/products">Products</Link>
         </nav>
         <Wallet />
-      </header>
+          <Routes>
+            <Route path="/" element={
+              <h2>Welcome!</h2>
+            } />
+            <Route path="OEMs"
+              element={
+                <RequireAuth redirectTo="/connect">
+                  <OEMs />
+                </RequireAuth>
+              }
+            />
+            <Route path="*" element={
+              < main style={{ padding: "1rem" }}>
+                <p>There's nothing here for '{window.location.pathname}'!</p>
+              </main>
+            } />
+          </Routes>
+        </header>
     </div>
+    </BrowserRouter>
   );
 }
 
