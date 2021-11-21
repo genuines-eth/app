@@ -6,6 +6,9 @@ npx create-react-app genuines --template typescript
 cd genuines
 yarn add ethers
 yarn add @ethersproject/shims
+
+# react router
+yarn add react-router-dom history
 ```
 ## Available Scripts
 

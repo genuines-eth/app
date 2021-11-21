@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -426,6 +428,15 @@ function App() {
         >
           genuines
         </a>
+        <nav
+          style={{
+            borderBottom: "solid 1px",
+            paddingBottom: "1rem"
+          }}
+        >
+          <Link to="/oems">OEMs</Link> | {" "}
+          <Link to="/products">Products</Link>
+        </nav>
       </header>
     </div>
   );
