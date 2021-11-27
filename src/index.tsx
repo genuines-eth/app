@@ -19,10 +19,14 @@ const themeOptions: ThemeOptions = {
   palette: {
     // type: 'light',
     primary: {
-      main: '#cacaca',
+      //main: '#cacaca',
+      main: '#cdc0d7',
     },
     secondary: {
-      main: '#388e3c',
+      main: '#74777c',
+      //main: '#388e3c',
+      // light: '#70a273',
+//      light: '#93a694',
     },
   },
 };

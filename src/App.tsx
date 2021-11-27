@@ -16,6 +16,8 @@ import { ethers } from 'ethers';
 import { FormatTypes } from '@ethersproject/abi';
 
 import { Wallet } from './features/wallet/Wallet';
+import ViewContactUs from './app/ViewContactUs';
+import ViewHowItWorks from './app/ViewHowItWorks'
 
 const contract1Abi = [
   {
@@ -424,35 +426,12 @@ function App() {
     <div className="App">
       <header className="App-header">
           <AppBar />
-        {false && <img src={logo} className="App-logo" alt="logo" />}
-        <p>
-          Got {provider ? ' a provider' : 'no provider yet!'}.
-          {blockNumber && ` Got ${blockNumber} as last block number.`}
-          Uri = '{uri}'
-        </p>
-        <a
-          className="App-link"
-          href="https://genuines.parts"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          genuines
-        </a>
-        <nav
-          style={{
-            borderBottom: "solid 1px",
-            paddingBottom: "1rem"
-          }}
-        >
-          <Link to="/oems">OEMs</Link> | {" "}
-          <Link to="/products">Products</Link>
-        </nav>
-        <Wallet />
+          {false && <img src={logo} className="App-logo" alt="logo" />}
           <Routes>
             <Route path="/" element={
-              <h2>Welcome!</h2>
+              <ViewHowItWorks />
             } />
-            <Route path="OEMs"
+            <Route path="oems"
               element={
                 <RequireAuth redirectTo="/connect">
                   <OEMs />
@@ -461,10 +440,27 @@ function App() {
             />
             <Route path="*" element={
               < main style={{ padding: "1rem" }}>
-                <p>There's nothing here for '{window.location.pathname}'!</p>
+                <p>There's nothing here for '{window.location.pathname}' yet!</p>
               </main>
             } />
           </Routes>
+          <ViewContactUs />
+          {false && <p>
+            Got {provider ? ' a provider' : 'no provider yet!'}.
+            {blockNumber && ` Got ${blockNumber} as last block number.`}
+            Uri = '{uri}'
+          </p>}
+          <nav
+            style={{
+              borderBottom: "solid 1px",
+              paddingBottom: "1rem"
+            }}
+          >
+            { /* <Link to="/oems">OEMs</Link> | { " "}
+              < Link to="/products">Products</Link> */}
+          </nav>
+          {false && <Wallet />}
+
         </header>
     </div>
     </BrowserRouter>

@@ -18,7 +18,7 @@ export default function ButtonAppBar() {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar >
+            <AppBar enableColorOnDark style={{ 'backgroundColor': '#cdd0d7' }}> { /* todo why is the color needed? */}
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -33,7 +33,7 @@ export default function ButtonAppBar() {
                         //sx={{ flexGrow: 1 }}
                         sx={{ display: { xs: 'none', sm: 'block' } }}
                     >
-                        genuines
+                        genuine's
                     </Typography>
                     <Box sx={{ flexGrow: 1 }} />
                     {!isConnected && <Button color="inherit" onClick={() => dispatch(connect(42))}>Connect</Button>}
