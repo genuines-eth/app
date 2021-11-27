@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
@@ -427,6 +427,7 @@ function App() {
       <header className="App-header">
           <AppBar />
           {false && <img src={logo} className="App-logo" alt="logo" />}
+        </header>
           <Routes>
             <Route path="/" element={
               <ViewHowItWorks />
@@ -461,7 +462,7 @@ function App() {
           </nav>
           {false && <Wallet />}
 
-        </header>
+
     </div>
     </BrowserRouter>
   );
