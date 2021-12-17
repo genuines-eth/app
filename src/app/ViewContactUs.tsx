@@ -5,13 +5,18 @@ import Container from '@mui/material/Container';
 // import Typography from '../components/Typography';
 import { Typography } from '@mui/material';
 
+import { ContactForm } from './ContactForm';
+
 function ViewContactUs() {
+
+    const [contactFormOpen, setContactFormOpen] = React.useState(false);
+
     return (
         <Container
             component="section"
             sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', my: 9 }}
         >
-            <Button
+            <Button onClick={() => setContactFormOpen(true)}
                 sx={{
                     border: '4px solid currentColor',
                     borderRadius: 0,
@@ -33,7 +38,9 @@ function ViewContactUs() {
                 alt="buoy"
                 sx={{ width: 60 }}
             />}
+            {contactFormOpen && <ContactForm onClose={() => setContactFormOpen(false)} ></ContactForm>}
         </Container>
+
     );
 }
 
