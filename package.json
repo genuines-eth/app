@@ -1,10 +1,12 @@
 {
   "name": "genuines",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "license": "CC-BY-NC-SA-4.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
+    "@ensdomains/dnsprovejs": "^0.4.1",
     "@ethersproject/shims": "^5.5.0",
     "@fontsource/roboto": "^4.5.1",
     "@mui/icons-material": "^5.1.1",
@@ -19,13 +21,16 @@
     "@types/react-dom": "^17.0.0",
     "ethers": "^5.5.1",
     "history": "^5.1.0",
+    "jimp": "^0.16.1",
+    "node-fetch": "2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "web3-providers-ws": "^1.6.1"
   },
   "scripts": {
     "start": "react-scripts start",

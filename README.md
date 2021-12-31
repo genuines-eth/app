@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# genuine's user (OEMs, dealer, customer) app readme
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ```
@@ -6,6 +6,8 @@ npx create-react-app genuines --template typescript
 cd genuines
 yarn add ethers
 yarn add @ethersproject/shims
+yarn add web3-providers-ws
+
 
 # react router
 yarn add react-router-dom history
@@ -19,6 +21,12 @@ yarn add @mui/material @emotion/react @emotion/styled
 yarn add @fontsource/roboto
 yarn add @mui/icons-material
 
+# watermarking images
+yarn add jimp
+
+# ens/dnssec
+yarn add '@ensdomains/dnsprovejs'
+yarn add node-fetch@2
 ```
 ## Available Scripts
 
